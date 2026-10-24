@@ -8,3 +8,8 @@ skills-lock.json
 
 # imagem de origem, não usada na página
 img/modelo-original.png
+
+# originais pesados (o site usa as versões .webp)
+img/modelo.png
+img/logo-fundo.png
+img/espaco-*.jpg

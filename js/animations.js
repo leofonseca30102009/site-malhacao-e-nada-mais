@@ -72,7 +72,7 @@
       ['.programs__special', '.programs__special, .programs__ask'],
       ['#planos .section-head', '#planos .section-head, .plans__toggle'],
       ['.plans__grid', '.plan', { step: 0.1 }],
-      ['.plans__extra', '.plans__extra, .plans__note'],
+      ['.plans__extra', '.plans__extra, .plans__notes'],
       ['.reviews__inner', '.reviews__intro, .highlights li', { step: 0.1 }],
       ['.visit__inner', '.visit__info, .visit__map', { step: 0.12 }],
       ['.cta', '.cta', { distance: 32 }]

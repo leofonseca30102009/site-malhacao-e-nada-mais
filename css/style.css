@@ -6,6 +6,7 @@
   --fundo: #12051f;
   --fundo-2: #0b0810;
   --superficie: #17121f;
+  --bloco: #141118;
   --linha: rgba(255, 255, 255, 0.08);
   --branco: #ffffff;
   --texto-2: rgba(255, 255, 255, 0.74);
@@ -313,7 +314,7 @@ img { max-width: 100%; }
 /* ---------- O ESPAÇO ---------- */
 .space {
   padding: 100px 4.4% 120px;
-  background: var(--fundo-2);
+  background: var(--bloco);
 }
 .space__inner {
   display: grid;
@@ -374,9 +375,8 @@ img { max-width: 100%; }
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: var(--roxo);
-  color: var(--branco);
-  box-shadow: 0 8px 18px rgba(123, 63, 228, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--roxo-claro);
 }
 .space__icon svg { width: 26px; height: 26px; }
 .space__features h3 {
@@ -395,8 +395,7 @@ img { max-width: 100%; }
 .programs {
   padding: 120px 4.4%;
   background:
-    radial-gradient(ellipse 60% 55% at 50% 45%, rgba(92, 34, 168, 0.45) 0%, transparent 75%),
-    #170a2a;
+    var(--fundo-2);
 }
 .programs__grid {
   display: grid;
@@ -415,7 +414,7 @@ img { max-width: 100%; }
   border: 1px solid var(--linha);
   transition: background .25s, border-color .25s;
 }
-.program:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(183, 148, 255, 0.3); }
+.program:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.16); }
 .program__icon,
 .special__icon {
   display: flex;
@@ -425,9 +424,8 @@ img { max-width: 100%; }
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: var(--roxo);
-  color: var(--branco);
-  box-shadow: 0 8px 18px rgba(123, 63, 228, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--roxo-claro);
 }
 .program__icon svg,
 .special__icon svg { width: 26px; height: 26px; }
@@ -452,13 +450,13 @@ img { max-width: 100%; }
   margin: 16px auto 0;
   padding: 28px 28px 30px;
   border-radius: var(--raio);
-  background: linear-gradient(135deg, rgba(123, 63, 228, 0.28), rgba(123, 63, 228, 0.1));
-  border: 1px solid rgba(183, 148, 255, 0.25);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--linha);
 }
 .programs__special-title {
   font-size: 15px;
   font-weight: 600;
-  color: #d4bfff;
+  color: var(--texto-2);
   margin-bottom: 20px;
 }
 .programs__special-grid {
@@ -467,7 +465,6 @@ img { max-width: 100%; }
   gap: 28px;
 }
 .special { display: flex; align-items: flex-start; gap: 18px; }
-.special__icon { background: var(--branco); color: var(--roxo); box-shadow: none; }
 
 .programs__ask {
   margin-top: 40px;
@@ -487,11 +484,29 @@ img { max-width: 100%; }
 .programs__ask a svg { width: 18px; height: 18px; }
 .programs__ask a:hover { color: var(--branco); gap: 9px; }
 
+/* atividades em fundo claro */
+.programs { background: #f6f4f9; color: #17121f; }
+.programs .program,
+.programs .programs__special {
+  background: var(--branco);
+  border-color: #e7e2ef;
+  box-shadow: 0 1px 2px rgba(23, 18, 31, 0.04), 0 8px 24px rgba(23, 18, 31, 0.05);
+}
+.programs .program:hover { background: var(--branco); border-color: #cbbcf0; }
+.programs .program__icon,
+.programs .special__icon { background: #f0eafc; color: var(--roxo); }
+.programs .program__text,
+.programs .special__text { color: #5b5567; }
+.programs .programs__special-title { color: #6e6879; }
+.programs .programs__ask { color: #5b5567; }
+.programs .programs__ask a { color: var(--roxo); }
+.programs .programs__ask a:hover { color: var(--roxo-hover); }
+
 /* ---------- PLANOS ---------- */
 .plans {
   padding: 120px 4.4%;
   text-align: center;
-  background: radial-gradient(ellipse 70% 55% at 50% 55%, rgba(123, 63, 228, 0.16) 0%, transparent 75%), #15111b;
+  background: var(--bloco);
 }
 .plans .section-head { margin-bottom: 28px; }
 .plans__toggle {
@@ -553,7 +568,7 @@ img { max-width: 100%; }
   font-family: var(--titulo);
   font-size: 22px;
   font-weight: 600;
-  color: var(--roxo-claro);
+  color: var(--branco);
   margin-bottom: 14px;
 }
 .plan__price {
@@ -591,13 +606,13 @@ img { max-width: 100%; }
   min-height: 48px;
   padding: 0 28px;
   border-radius: 999px;
-  background: var(--roxo);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: var(--branco);
   font-size: 16px;
   font-weight: 600;
-  transition: transform .2s, background .2s;
+  transition: transform .2s, background .2s, border-color .2s;
 }
-.plan__btn:hover { transform: translateY(-2px); background: var(--roxo-hover); }
+.plan__btn:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.4); }
 
 /* plano em destaque */
 .plan--featured {
@@ -610,7 +625,7 @@ img { max-width: 100%; }
 .plan--featured .plan__price { color: #12051f; }
 .plan--featured .plan__price span { color: rgba(18, 5, 31, 0.75); }
 .plan--featured .plan__list { color: rgba(18, 5, 31, 0.85); }
-.plan--featured .plan__btn { background: #12051f; }
+.plan--featured .plan__btn { background: #12051f; border-color: #12051f; }
 .plan--featured .plan__btn:hover { background: #2a0c4f; }
 
 .plans__extra {
@@ -618,15 +633,21 @@ img { max-width: 100%; }
   font-size: 16px;
   color: var(--texto-2);
 }
+.plans__notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
 .plans__note {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
   padding: 12px 22px;
   border-radius: 999px;
-  border: 1px solid rgba(183, 148, 255, 0.35);
-  background: rgba(123, 63, 228, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -712,7 +733,7 @@ img { max-width: 100%; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(123, 63, 228, 0.2);
+  background: rgba(255, 255, 255, 0.07);
   color: var(--roxo-claro);
 }
 .highlights__icon svg { width: 22px; height: 22px; }
@@ -905,7 +926,7 @@ img { max-width: 100%; }
 /* ---------- RODAPÉ ---------- */
 .footer {
   padding: 0 4.4%;
-  background: var(--fundo-2);
+  background: var(--superficie);
 }
 .footer__inner {
   display: grid;
@@ -913,8 +934,7 @@ img { max-width: 100%; }
   gap: 40px;
   max-width: var(--largura);
   margin: 0 auto;
-  padding: 56px 0;
-  border-top: 1px solid var(--linha);
+  padding: 64px 0 56px;
 }
 .footer__logo {
   display: inline-flex;
@@ -1136,7 +1156,7 @@ img { max-width: 100%; }
 .anim-ready .programs__ask,
 .anim-ready .plan,
 .anim-ready .plans__extra,
-.anim-ready .plans__note,
+.anim-ready .plans__notes,
 .anim-ready .reviews__intro,
 .anim-ready .highlights li,
 .anim-ready .visit__info,

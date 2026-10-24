@@ -1,0 +1,10 @@
+# ferramentas de desenvolvimento (não vão para o site)
+.agents/
+.claude/
+node_modules/
+package.json
+package-lock.json
+skills-lock.json
+
+# imagem de origem, não usada na página
+img/modelo-original.png
